@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #24142f, #080812 70%);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Stars */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(white 1px, transparent 1px),
+                radial-gradient(white 1px, transparent 1px);
+            background-size: 90px 90px, 140px 140px;
+            background-position: 10px 20px, 60px 80px;
+            opacity: 0.25;
+            animation: stars 20s linear infinite;
+        }
+
+        @keyframes stars {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-90px);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .small {
+            letter-spacing: 5px;
+            font-size: 12px;
+            color: #cdb6d8;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 75px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #c8c3cc;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        button {
+            margin-top: 35px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            border: 1px solid #ffffff40;
+            background: #f0d5e8;
+            color: #17111a;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 30px #e9c7e855;
+        }
+
+        .heart {
+            font-size: 25px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="small">
+            A little something
+        </div>
+
+        <h1>
+            Hey, you.
+        </h1>
+
+        <p>
+            I made a tiny corner of the internet<br>
+            just for you.
+        </p>
+
+        <button onclick="startWebsite()">
+            Enter <span class="heart">♡</span>
+        </button>
+
+    </div>
+
+    <script>
+
+        function startWebsite() {
+            alert("Okay... let's begin ❤️");
+        }
+
+    </script>
+
+</body>
+</html>
