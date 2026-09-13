@@ -3,813 +3,1488 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For My Lovess 🌻🤍</title>
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial, sans-serif;
-  overflow-x:hidden;
-  background:#fff4a8;
-  color:#5a3b00;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+    background:#fff2a8;
+    color:#5a3b00;
 }
 
-/* SUNFLOWER BACKGROUND */
+/* =========================
+   SUNFLOWER BACKGROUND
+========================= */
+
 #sunflower-bg{
-  position:fixed;
-  inset:0;
-  overflow:hidden;
-  pointer-events:none;
-  z-index:0;
-  background:
-    radial-gradient(circle at 20% 20%,#fffbd2 0%,transparent 30%),
-    radial-gradient(circle at 80% 70%,#ffe66d 0%,transparent 35%),
-    linear-gradient(135deg,#fff9c4,#ffd84d);
+    position:fixed;
+    inset:0;
+    z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+
+    background:
+        radial-gradient(circle at 20% 20%, #fffbd7, transparent 30%),
+        radial-gradient(circle at 80% 70%, #ffe477, transparent 35%),
+        linear-gradient(135deg,#fff9c7,#ffd94f);
 }
 
 .flower{
-  position:absolute;
-  font-size:45px;
-  opacity:.72;
-  animation:sway 4s ease-in-out infinite alternate;
+    position:absolute;
+    opacity:.65;
+    animation:sway 4s ease-in-out infinite alternate;
 }
 
 @keyframes sway{
-  from{transform:rotate(-8deg) translateY(0);}
-  to{transform:rotate(8deg) translateY(-15px);}
+    from{
+        transform:rotate(-8deg) translateY(0);
+    }
+    to{
+        transform:rotate(8deg) translateY(-14px);
+    }
 }
 
 .falling{
-  position:absolute;
-  top:-80px;
-  animation:fall linear infinite;
+    position:absolute;
+    top:-80px;
+    animation:fall linear infinite;
 }
 
 @keyframes fall{
-  from{
-    transform:translateY(-100px) rotate(0deg);
-  }
-  to{
-    transform:translateY(115vh) rotate(360deg);
-  }
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+    to{
+        transform:translateY(115vh) rotate(360deg);
+    }
 }
 
-/* HEARTS */
+/* =========================
+   FLOATING HEARTS
+========================= */
+
 .heart{
-  position:fixed;
-  bottom:-50px;
-  pointer-events:none;
-  z-index:2;
-  animation:floatHeart 7s linear infinite;
-  opacity:.75;
+    position:fixed;
+    bottom:-50px;
+    z-index:2;
+    pointer-events:none;
+    opacity:.7;
+    animation:floatHeart 7s linear infinite;
 }
 
 @keyframes floatHeart{
-  0%{
-    transform:translateY(0) scale(.7);
-    opacity:0;
-  }
-  15%{opacity:.8;}
-  100%{
-    transform:translateY(-115vh) scale(1.3);
-    opacity:0;
-  }
+    0%{
+        transform:translateY(0) scale(.7);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-115vh) scale(1.3);
+        opacity:0;
+    }
 }
 
-/* PAGES */
+/* =========================
+   PAGES
+========================= */
+
 .page{
-  position:relative;
-  z-index:3;
-  min-height:100vh;
-  width:100%;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:35px 18px;
-  animation:pageIn .7s ease;
+    position:relative;
+    z-index:3;
+    min-height:100vh;
+    width:100%;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:35px 18px;
+
+    animation:pageIn .7s ease;
 }
 
 .page.active{
-  display:flex;
+    display:flex;
 }
 
 @keyframes pageIn{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .card{
-  width:min(900px,95%);
-  background:rgba(255,255,255,.82);
-  backdrop-filter:blur(12px);
-  border:2px solid rgba(255,193,7,.4);
-  border-radius:30px;
-  padding:45px 30px;
-  text-align:center;
-  box-shadow:0 20px 60px rgba(120,80,0,.18);
+    width:min(900px,95%);
+
+    background:rgba(255,255,255,.84);
+    backdrop-filter:blur(12px);
+
+    border:2px solid rgba(255,193,7,.4);
+
+    border-radius:30px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 60px rgba(120,80,0,.18);
 }
 
 h1{
-  font-size:clamp(32px,7vw,65px);
-  margin-bottom:18px;
+    font-size:clamp(34px,7vw,65px);
+    margin-bottom:18px;
 }
 
 h2{
-  font-size:clamp(27px,5vw,45px);
-  margin-bottom:18px;
+    font-size:clamp(28px,5vw,45px);
+    margin-bottom:18px;
 }
 
 p{
-  font-size:18px;
-  line-height:1.7;
-}
-
-.subtitle{
-  font-size:20px;
-  margin-bottom:30px;
+    font-size:18px;
+    line-height:1.7;
 }
 
 button{
-  border:none;
-  background:#f6b800;
-  color:white;
-  padding:15px 30px;
-  border-radius:30px;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(160,100,0,.2);
-  transition:.25s;
+    border:none;
+
+    background:#f5b900;
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(160,100,0,.2);
+
+    transition:.25s;
 }
 
 button:hover{
-  transform:scale(1.06);
-  background:#e9a900;
+    transform:scale(1.06);
+    background:#e5a900;
 }
 
-/* CAKE */
+/* =========================
+   BIRTHDAY CAKE
+========================= */
+
 .cake-area{
-  margin:30px auto;
-  cursor:pointer;
-  width:240px;
+    margin:35px auto;
+    cursor:pointer;
+    width:240px;
 }
 
 .cake{
-  position:relative;
-  margin:auto;
-  width:200px;
-  height:90px;
-  background:#f7b6c9;
-  border-radius:15px 15px 25px 25px;
-  border-bottom:12px solid #d97899;
+    position:relative;
+
+    margin:auto;
+
+    width:200px;
+    height:90px;
+
+    background:#f7b6c9;
+
+    border-radius:
+        15px 15px 25px 25px;
+
+    border-bottom:12px solid #d97899;
 }
 
 .cake:before{
-  content:"";
-  position:absolute;
-  width:200px;
-  height:28px;
-  top:-12px;
-  left:0;
-  border-radius:50%;
-  background:#fff0f5;
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+    height:28px;
+
+    top:-12px;
+    left:0;
+
+    border-radius:50%;
+
+    background:#fff0f5;
 }
 
 .candles{
-  position:absolute;
-  top:-80px;
-  left:0;
-  width:100%;
-  display:flex;
-  justify-content:center;
-  gap:25px;
+    position:absolute;
+
+    top:-80px;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+
+    gap:25px;
 }
 
 .candle{
-  width:18px;
-  height:58px;
-  background:#fff;
-  border-radius:6px;
-  position:relative;
+    width:18px;
+    height:58px;
+
+    background:white;
+
+    border-radius:6px;
+
+    position:relative;
 }
 
 .flame{
-  position:absolute;
-  width:17px;
-  height:25px;
-  background:#ff9d00;
-  border-radius:50% 50% 50% 0;
-  transform:rotate(-45deg);
-  top:-27px;
-  left:1px;
-  opacity:0;
-  box-shadow:0 0 20px #ff9d00;
+    position:absolute;
+
+    width:17px;
+    height:25px;
+
+    background:#ff9d00;
+
+    border-radius:
+        50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    top:-27px;
+    left:1px;
+
+    opacity:0;
+
+    box-shadow:
+        0 0 20px #ff9d00;
 }
 
 .lit .flame{
-  opacity:1;
-  animation:flicker .5s infinite alternate;
+    opacity:1;
+    animation:flicker .5s infinite alternate;
 }
 
 @keyframes flicker{
-  from{transform:rotate(-45deg) scale(1);}
-  to{transform:rotate(-40deg) scale(1.15);}
+    from{
+        transform:rotate(-45deg) scale(1);
+    }
+
+    to{
+        transform:rotate(-40deg) scale(1.15);
+    }
 }
 
 .blown .flame{
-  opacity:0;
+    opacity:0;
 }
 
 .cake-hint{
-  margin-top:35px;
-  font-weight:bold;
+    margin-top:35px;
+    font-weight:bold;
 }
 
-/* FIRST MEET */
+/* =========================
+   FIRST MEET
+========================= */
+
 .photo-frame{
-  margin:25px auto;
-  width:min(430px,95%);
-  padding:12px;
-  background:white;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(100,60,0,.2);
-  transform:rotate(-2deg);
+    margin:25px auto;
+
+    width:min(430px,95%);
+
+    padding:12px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 15px 40px rgba(100,60,0,.2);
+
+    transform:rotate(-2deg);
 }
 
 .photo-frame img{
-  display:block;
-  width:100%;
-  border-radius:12px;
+    display:block;
+
+    width:100%;
+
+    border-radius:12px;
 }
 
 .date{
-  font-size:24px;
-  font-weight:bold;
-  margin:20px 0 8px;
+    font-size:24px;
+    font-weight:bold;
+
+    margin:20px 0 8px;
 }
 
-/* LOVE CARDS */
+/* =========================
+   POLAROID SECTION
+========================= */
+
+.polaroid-section{
+    margin-top:30px;
+}
+
+.polaroid-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:35px 25px;
+
+    margin-top:35px;
+}
+
+.polaroid{
+    background:white;
+
+    padding:12px 12px 45px;
+
+    box-shadow:
+        0 12px 25px rgba(80,50,0,.2);
+
+    transition:.35s;
+
+    position:relative;
+}
+
+.polaroid:nth-child(1){
+    transform:rotate(-4deg);
+}
+
+.polaroid:nth-child(2){
+    transform:rotate(3deg);
+}
+
+.polaroid:nth-child(3){
+    transform:rotate(-2deg);
+}
+
+.polaroid:nth-child(4){
+    transform:rotate(4deg);
+}
+
+.polaroid:nth-child(5){
+    transform:rotate(-3deg);
+}
+
+.polaroid:hover{
+    transform:
+        rotate(0deg)
+        translateY(-8px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 35px rgba(80,50,0,.25);
+}
+
+.polaroid img{
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+}
+
+.polaroid-caption{
+    position:absolute;
+
+    bottom:13px;
+    left:0;
+    width:100%;
+
+    text-align:center;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size:17px;
+
+    color:#4b3514;
+}
+
+/* =========================
+   LOVE BOXES
+========================= */
+
 .love-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  margin-top:30px;
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
 }
 
 .love-box{
-  background:linear-gradient(135deg,#fffdf0,#fff1a8);
-  border:2px solid #ffd34d;
-  border-radius:22px;
-  padding:25px 15px;
-  min-height:130px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:19px;
-  font-weight:bold;
-  transition:.3s;
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf0,
+            #fff1a8
+        );
+
+    border:2px solid #ffd34d;
+
+    border-radius:22px;
+
+    padding:25px 15px;
+
+    min-height:130px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-direction:column;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    transition:.3s;
 }
 
 .love-box:hover{
-  transform:translateY(-6px) rotate(1deg);
-  box-shadow:0 12px 25px rgba(120,80,0,.15);
+    transform:
+        translateY(-6px)
+        rotate(1deg);
+
+    box-shadow:
+        0 12px 25px
+        rgba(120,80,0,.15);
 }
 
 .love-ending{
-  margin-top:28px;
-  font-size:19px;
+    margin-top:28px;
+    font-size:19px;
 }
 
-/* ENVELOPE */
+/* =========================
+   ENVELOPE
+========================= */
+
 .envelope-wrap{
-  margin:35px auto;
-  width:min(500px,95%);
+    margin:35px auto;
+
+    width:min(500px,95%);
 }
 
 .envelope{
-  position:relative;
-  height:300px;
-  background:#fff8df;
-  border-radius:15px;
-  box-shadow:0 15px 40px rgba(100,60,0,.25);
-  cursor:pointer;
-  overflow:hidden;
+    position:relative;
+
+    height:300px;
+
+    background:#fff8df;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(100,60,0,.25);
+
+    cursor:pointer;
+
+    overflow:hidden;
 }
 
 .envelope-front{
-  position:absolute;
-  inset:0;
-  background:#ffe58a;
-  clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);
-  z-index:3;
+    position:absolute;
+
+    inset:0;
+
+    background:#ffe58a;
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 55%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+
+    z-index:3;
 }
 
 .envelope-flap{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:150px;
-  background:#ffd45c;
-  clip-path:polygon(0 0,100% 0,50% 100%);
-  z-index:4;
-  transform-origin:top;
-  transition:1s;
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:150px;
+
+    background:#ffd45c;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    z-index:4;
+
+    transform-origin:top;
+
+    transition:1s;
 }
 
 .letter{
-  position:absolute;
-  left:5%;
-  width:90%;
-  bottom:-100%;
-  background:white;
-  border-radius:12px;
-  padding:30px 24px;
-  text-align:left;
-  transition:1s;
-  z-index:2;
-  box-shadow:0 5px 20px rgba(0,0,0,.1);
+    position:absolute;
+
+    left:5%;
+
+    width:90%;
+
+    bottom:-100%;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:30px 24px;
+
+    text-align:left;
+
+    transition:1s;
+
+    z-index:2;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.1);
 }
 
 .envelope.open{
-  overflow:visible;
-  height:auto;
-  min-height:300px;
-  padding-bottom:20px;
+    overflow:visible;
+
+    height:auto;
+
+    min-height:300px;
+
+    padding-bottom:20px;
 }
 
 .envelope.open .envelope-flap{
-  transform:rotateX(180deg);
+    transform:rotateX(180deg);
 }
 
 .envelope.open .letter{
-  position:relative;
-  bottom:auto;
-  margin:35px auto 0;
-  z-index:5;
+    position:relative;
+
+    bottom:auto;
+
+    margin:35px auto 0;
+
+    z-index:5;
 }
 
 .letter p{
-  font-size:17px;
-  margin-bottom:16px;
+    font-size:17px;
+
+    margin-bottom:16px;
 }
 
 .letter .special{
-  text-align:center;
-  font-weight:bold;
-  font-size:20px;
+    text-align:center;
+
+    font-weight:bold;
+
+    font-size:20px;
 }
 
-/* FINAL */
+/* =========================
+   FINAL
+========================= */
+
 .final-heart{
-  font-size:70px;
-  animation:pulse 1.2s infinite;
+    font-size:70px;
+
+    animation:pulse 1.2s infinite;
 }
 
 @keyframes pulse{
-  50%{transform:scale(1.18);}
+    50%{
+        transform:scale(1.18);
+    }
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
-  .card{
-    padding:32px 18px;
-  }
 
-  .love-grid{
-    grid-template-columns:1fr;
-  }
+    .card{
+        padding:32px 18px;
+    }
 
-  .love-box{
-    min-height:100px;
-  }
+    .love-grid{
+        grid-template-columns:1fr;
+    }
 
-  .envelope{
-    min-height:250px;
-  }
+    .love-box{
+        min-height:105px;
+    }
 
-  .letter{
-    padding:22px 17px;
-  }
+    .polaroid-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
 
-  .letter p{
-    font-size:16px;
-  }
+    .envelope{
+        min-height:250px;
+    }
+
+    .letter{
+        padding:22px 17px;
+    }
+
+    .letter p{
+        font-size:16px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- SUNFLOWER BACKGROUND -->
 <div id="sunflower-bg"></div>
 
-<!-- WELCOME -->
+
+<!-- =========================
+     WELCOME
+========================= -->
+
 <section class="page active" id="welcome">
-  <div class="card">
-    <div style="font-size:65px;">🌻</div>
-    <h1>Hey, you. 🌻</h1>
-    <h2>My Lovess 🤍🪬</h2>
-    <p class="subtitle">
-      I made a tiny little corner of the internet just for you.
-    </p>
-    <button onclick="showPage('birthday')">
-      Come inside 🤍
-    </button>
-  </div>
+
+    <div class="card">
+
+        <div style="font-size:65px;">
+            🌻
+        </div>
+
+        <h1>
+            Hey, you. 🌻
+        </h1>
+
+        <h2>
+            My Lovess 🤍🪬
+        </h2>
+
+        <p style="margin-bottom:30px;">
+            I made a tiny little corner of the internet
+            just for you.
+        </p>
+
+        <button onclick="showPage('birthday')">
+            Come inside 🤍
+        </button>
+
+    </div>
+
 </section>
 
-<!-- BIRTHDAY -->
+
+<!-- =========================
+     BIRTHDAY
+========================= -->
+
 <section class="page" id="birthday">
-  <div class="card">
-    <div style="font-size:60px;">🌻🎂🌻</div>
-    <h2>Happiest Birthday<br>My Lovessuuu 🥹🤍🌻🪬</h2>
 
-    <p>
-      Before anything else... make a wish. 🤍
-    </p>
+    <div class="card">
 
-    <div class="cake-area" onclick="cakeClick()">
-      <div class="cake">
-        <div class="candles" id="candles">
-          <div class="candle"><div class="flame"></div></div>
-          <div class="candle"><div class="flame"></div></div>
-          <div class="candle"><div class="flame"></div></div>
+        <div style="font-size:60px;">
+            🌻🎂🌻
         </div>
-      </div>
-      <div class="cake-hint" id="cakeHint">
-        Tap the cake 🕯️✨
-      </div>
+
+        <h2>
+            Happiest Birthday<br>
+            My Lovessuuu 🥹🤍🌻🪬
+        </h2>
+
+        <p>
+            Before anything else...
+            make a wish. 🤍
+        </p>
+
+        <div
+            class="cake-area"
+            onclick="cakeClick()"
+        >
+
+            <div class="cake">
+
+                <div
+                    class="candles"
+                    id="candles"
+                >
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="cake-hint"
+                id="cakeHint"
+            >
+                Tap the cake 🕯️✨
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<!-- FIRST MEET -->
+
+<!-- =========================
+     FIRST MEET
+========================= -->
+
 <section class="page" id="firstMeet">
-  <div class="card">
-    <div style="font-size:50px;">🌻📸</div>
 
-    <h2>The Beginning 🤍</h2>
+    <div class="card">
 
-    <div class="photo-frame">
-      <img src="firstmeet.jpg" alt="Our first meet">
-    </div>
+        <div style="font-size:50px;">
+            🌻📸
+        </div>
 
-    <div class="date">August 7th 🤍</div>
-    <p><b>Nexus Vijaya Mall</b></p>
+        <h2>
+            The Beginning 🤍
+        </h2>
 
-    <p style="margin-top:18px;">
-      A normal day that somehow became one of the most special
-      dates to me. 🥹🌻
-    </p>
+        <div class="photo-frame">
 
-    <p style="margin-top:10px;">
-      The day our little story began. 🤍
-    </p>
-
-    <button style="margin-top:28px;" onclick="showPage('loveSection')">
-      There's more I love about you 🌻
-    </button>
-  </div>
-</section>
-
-<!-- THINGS I LOVE -->
-<section class="page" id="loveSection">
-  <div class="card">
-
-    <div style="font-size:50px;">🌻🤍</div>
-
-    <h2>Things I Love About You</h2>
-
-    <p>
-      Honestly, I love everything about you...
-      but let me try to pick a few. 🥹
-    </p>
-
-    <div class="love-grid">
-
-      <div class="love-box">
-        😊<br>That cute smile
-      </div>
-
-      <div class="love-box">
-        👀<br>Those eyes
-      </div>
-
-      <div class="love-box">
-        🗣️<br>The way you talk
-      </div>
-
-      <div class="love-box">
-        🤍<br>Your hair & beard
-      </div>
-
-      <div class="love-box">
-        🥹<br>Your compliments
-      </div>
-
-      <div class="love-box">
-        💚<br>The greenest flag
-      </div>
-
-      <div class="love-box">
-        🌻<br>How happy you make me
-      </div>
-
-    </div>
-
-    <p class="love-ending">
-      I could keep going... but we'd be here forever. 😭
-      <br>
-      I'm just so, so happy that it's you. 🤍
-    </p>
-
-    <button style="margin-top:28px;" onclick="showPage('envelopeSection')">
-      One last thing... 💌
-    </button>
-
-  </div>
-</section>
-
-<!-- ENVELOPE -->
-<section class="page" id="envelopeSection">
-  <div class="card">
-
-    <div style="font-size:55px;">💌🌻</div>
-
-    <h2>A Letter For You</h2>
-
-    <p>
-      Tap the envelope. 🤍
-    </p>
-
-    <div class="envelope-wrap">
-      <div class="envelope" id="envelope" onclick="openLetter()">
-
-        <div class="envelope-flap"></div>
-
-        <div class="letter">
-
-          <p><b>Dear Harish, 🤍</b></p>
-
-          <p>
-            From the day I saw you in person, from the day we started
-            to talk, from the day I actually started falling for you,
-            everything seems to be a little delulu. 😭🤍
-          </p>
-
-          <p>
-            From manifesting a person like you to actually getting you...
-            nejama, everything still seems like a dream to me.
-            And I know we have a lot more to go ahead. 🌻
-          </p>
-
-          <p>
-            Apo apo vara kutty sandaiya irukatum, illa epomey konjitu
-            iruka namma talks-ah irukatum, everything about us feels
-            too special and too divine.
-          </p>
-
-          <p>
-            Even the smallest moments with you somehow become memories
-            that I want to keep forever. 🤍
-          </p>
-
-          <p>
-            I love everything about you.
-            I love the way you talk.
-            I love your eyes.
-            I love your hair.
-            I love your beard.
-            I love that cute smile of yours.
-          </p>
-
-          <p>
-            And I love every single compliment you give me,
-            even the ones you probably think are just small things. 🥹
-          </p>
-
-          <p>
-            I love how cute you are without even trying.
-            I love the little things you do.
-            I love the way you make me smile.
-            I love how happy I feel when I'm with you.
-          </p>
-
-          <p>
-            And honestly, I'm just so, so happy that it is you. 🤍
-          </p>
-
-          <p>
-            Sometimes I genuinely sit and think about how lucky I am
-            that the person I once only wished for actually became
-            someone I get to call mine.
-          </p>
-
-          <p>
-            And that thought makes me ridiculously happy. 🌻
-          </p>
-
-          <p class="special">
-            பிறந்ததற்கு நன்றி. 🤍
-          </p>
-
-          <p>
-            Thank you for being born.
-            Thank you for existing.
-            Thank you for becoming such a beautiful part of my life.
-            And thank you for being exactly who you are.
-          </p>
-
-          <p>
-            I don't know how many words I can write and still feel
-            like I've said everything.
-            Because no matter how much I write,
-            there will always be more that I love about you.
-          </p>
-
-          <p>
-            So for now... I just want you to know that I love you.
-            More than these words can explain. 🤍🌻🪬
-          </p>
-
-          <p class="special">
-            May all your wishes come true. ✨🤍
-          </p>
-
-          <p class="special">
-            May every dream you have find its way to you. 🌻
-          </p>
-
-          <p class="special">
-            Happiest Birthday, Director Harish 🎬🌻🤍
-          </p>
-
-          <p class="special">
-            I love youuuuu, My Lovessuuu. 🤍🥹
-          </p>
-
-          <p class="special">
-            Happiest Birthday Thangoww! 🥹🌻🎂🤍
-          </p>
+            <img
+                src="firstmeet.jpg"
+                alt="Our first meet"
+            >
 
         </div>
 
-        <div class="envelope-front"></div>
+        <div class="date">
+            August 7th 🤍
+        </div>
 
-      </div>
+        <p style="margin-top:18px;">
+            A normal day that somehow became
+            one of the most special dates to me. 🥹🌻
+        </p>
+
+        <p style="margin-top:10px;">
+            The day our little story began. 🤍
+        </p>
+
+        <button
+            style="margin-top:28px;"
+            onclick="showPage('polaroids')"
+        >
+            A few more memories 📷
+        </button>
+
     </div>
 
-    <button onclick="showPage('final')">
-      Continue 🤍
-    </button>
-
-  </div>
 </section>
 
-<!-- FINAL -->
+
+<!-- =========================
+     POLAROID SECTION
+========================= -->
+
+<section class="page" id="polaroids">
+
+    <div class="card polaroid-section">
+
+        <div style="font-size:55px;">
+            📷🌻🤍
+        </div>
+
+        <h2>
+            Little Moments With You
+        </h2>
+
+        <p>
+            Some pictures,
+            some memories,
+            and a lot of feelings. 🥹
+        </p>
+
+        <div class="polaroid-grid">
+
+            <div class="polaroid">
+
+                <img
+                    src="firstmeet.jpg"
+                    alt="Memory 1"
+                >
+
+                <div class="polaroid-caption">
+                    where it all began 🤍
+                </div>
+
+            </div>
+
+
+            <div class="polaroid">
+
+                <img
+                    src="photo2.jpg"
+                    alt="Memory 2"
+                >
+
+                <div class="polaroid-caption">
+                    one of my favourites 🌻
+                </div>
+
+            </div>
+
+
+            <div class="polaroid">
+
+                <img
+                    src="photo3.jpg"
+                    alt="Memory 3"
+                >
+
+                <div class="polaroid-caption">
+                    us 🥹🤍
+                </div>
+
+            </div>
+
+
+            <div class="polaroid">
+
+                <img
+                    src="photo4.jpg"
+                    alt="Memory 4"
+                >
+
+                <div class="polaroid-caption">
+                    another little memory 🤍
+                </div>
+
+            </div>
+
+
+            <div class="polaroid">
+
+                <img
+                    src="photo5.jpg"
+                    alt="Memory 5"
+                >
+
+                <div class="polaroid-caption">
+                    and many more to come 🌻
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            style="margin-top:40px;"
+            onclick="showPage('loveSection')"
+        >
+            There's more I love about you 🤍
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     THINGS I LOVE
+========================= -->
+
+<section class="page" id="loveSection">
+
+    <div class="card">
+
+        <div style="font-size:50px;">
+            🌻🤍
+        </div>
+
+        <h2>
+            Things I Love About You
+        </h2>
+
+        <p>
+            Honestly, I love everything about you...
+            but let me try to pick a few. 🥹
+        </p>
+
+
+        <div class="love-grid">
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">😂</div>
+                How you make me laugh
+            </div>
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">🥹</div>
+                Your random talks
+                that I can never get enough of
+            </div>
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">🤍</div>
+                How comfortable
+                I feel around you
+            </div>
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">😭❤️</div>
+                How obsessed
+                I am with you
+            </div>
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">💋</div>
+                Your kisses...
+                I'm never getting over those
+            </div>
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">🫂</div>
+                Those hugs...
+                literally my favourite place to be
+            </div>
+
+
+            <div class="love-box">
+                <div style="font-size:30px;">🌻</div>
+                The way you make me
+                feel so loved & happy
+            </div>
+
+
+        </div>
+
+
+        <p class="love-ending">
+
+            Honestly, seven isn't even enough.
+            I love your smile, your eyes, your hair,
+            your beard, the way you talk, your compliments...
+
+            <br><br>
+
+            Basically, I love way too much about you. 😭🤍
+
+        </p>
+
+
+        <button
+            style="margin-top:28px;"
+            onclick="showPage('envelopeSection')"
+        >
+            One last thing... 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ENVELOPE
+========================= -->
+
+<section class="page" id="envelopeSection">
+
+    <div class="card">
+
+        <div style="font-size:55px;">
+            💌🌻
+        </div>
+
+        <h2>
+            A Letter For You
+        </h2>
+
+        <p>
+            Tap the envelope. 🤍
+        </p>
+
+
+        <div class="envelope-wrap">
+
+            <div
+                class="envelope"
+                id="envelope"
+                onclick="openLetter()"
+            >
+
+                <div class="envelope-flap"></div>
+
+
+                <div class="letter">
+
+                    <p>
+                        <b>Dear Harish, 🤍</b>
+                    </p>
+
+
+                    <p>
+                        From the day I saw you in person,
+                        from the day we started to talk,
+                        from the day I actually started
+                        falling for you, everything seems
+                        to be a little delulu. 😭🤍
+                    </p>
+
+
+                    <p>
+                        From manifesting a person like you
+                        to actually getting you...
+                        nejama, everything still seems like
+                        a dream to me.
+                        And I know we have a lot more to go ahead. 🌻
+                    </p>
+
+
+                    <p>
+                        Apo apo vara kutty sandaiya irukatum,
+                        illa epomey konjitu iruka namma talks-ah irukatum,
+                        everything about us feels too special
+                        and too divine.
+                    </p>
+
+
+                    <p>
+                        Even the smallest moments with you
+                        somehow become memories that I want
+                        to keep forever. 🤍
+                    </p>
+
+
+                    <p>
+                        I love everything about you.
+                        I love the way you talk.
+                        I love your eyes.
+                        I love your hair.
+                        I love your beard.
+                        I love that cute smile of yours.
+                    </p>
+
+
+                    <p>
+                        And I love every single compliment
+                        you give me, even the ones you probably
+                        think are just small things. 🥹
+                    </p>
+
+
+                    <p>
+                        I love how cute you are without even trying.
+                        I love the little things you do.
+                        I love the way you make me smile.
+                        I love how happy I feel when I'm with you.
+                    </p>
+
+
+                    <p>
+                        And honestly,
+                        I'm just so, so happy that it is you. 🤍
+                    </p>
+
+
+                    <p>
+                        Sometimes I genuinely sit and think
+                        about how lucky I am that the person
+                        I once only wished for actually became
+                        someone I get to call mine.
+                    </p>
+
+
+                    <p>
+                        And that thought makes me ridiculously happy. 🌻
+                    </p>
+
+
+                    <p class="special">
+                        பிறந்ததற்கு நன்றி. 🤍
+                    </p>
+
+
+                    <p>
+                        Thank you for being born.
+                        Thank you for existing.
+                        Thank you for becoming such a beautiful
+                        part of my life.
+                        And thank you for being exactly who you are.
+                    </p>
+
+
+                    <p>
+                        I don't know how many words I can write
+                        and still feel like I've said everything.
+                        Because no matter how much I write,
+                        there will always be more that I love about you.
+                    </p>
+
+
+                    <p>
+                        So for now...
+                        I just want you to know that I love you.
+                        More than these words can explain. 🤍🌻🪬
+                    </p>
+
+
+                    <p class="special">
+                        May all your wishes come true. ✨🤍
+                    </p>
+
+
+                    <p class="special">
+                        May every dream you have
+                        find its way to you. 🌻
+                    </p>
+
+
+                    <p class="special">
+                        Happiest Birthday,
+                        Director Harish 🎬🌻🤍
+                    </p>
+
+
+                    <p class="special">
+                        I love youuuuu,
+                        My Lovessuuu. 🤍🥹
+                    </p>
+
+
+                    <p class="special">
+                        Happiest Birthday Thangoww!
+                        🥹🌻🎂🤍
+                    </p>
+
+                </div>
+
+
+                <div class="envelope-front"></div>
+
+            </div>
+
+        </div>
+
+
+        <button onclick="showPage('final')">
+            Continue 🤍
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
 <section class="page" id="final">
-  <div class="card">
 
-    <div class="final-heart">🤍</div>
+    <div class="card">
 
-    <div style="font-size:55px;margin:15px;">
-      🌻🪬🌻
+        <div class="final-heart">
+            🤍
+        </div>
+
+        <div style="font-size:55px;margin:15px;">
+            🌻🪬🌻
+        </div>
+
+
+        <h2>
+            I'm so happy that it's you.
+        </h2>
+
+
+        <p>
+            Out of all the people in this world,
+            somehow our paths crossed.
+        </p>
+
+
+        <p style="margin-top:15px;">
+            And I'll always be grateful for that. 🤍
+        </p>
+
+
+        <p
+            style="
+            margin-top:25px;
+            font-size:23px;
+            font-weight:bold;
+            "
+        >
+            Happiest Birthday,<br>
+            My Lovessuuu 🥹🤍🌻🪬
+        </p>
+
+
+        <p style="margin-top:25px;">
+            I love youuuuu. 🤍
+        </p>
+
     </div>
 
-    <h2>I'm so happy that it's you.</h2>
-
-    <p>
-      Out of all the people in this world,
-      somehow our paths crossed.
-    </p>
-
-    <p style="margin-top:15px;">
-      And I'll always be grateful for that. 🤍
-    </p>
-
-    <p style="margin-top:25px;font-size:23px;font-weight:bold;">
-      Happiest Birthday,<br>
-      My Lovessuuu 🥹🤍🌻🪬
-    </p>
-
-    <p style="margin-top:25px;">
-      I love youuuuu. 🤍
-    </p>
-
-  </div>
 </section>
+
 
 <script>
 
-/* CREATE SUNFLOWERS */
-const bg = document.getElementById("sunflower-bg");
+/* =========================
+   CREATE SUNFLOWERS
+========================= */
 
-for(let i=0;i<24;i++){
-  const flower=document.createElement("div");
-  flower.className="flower";
-  flower.innerHTML="🌻";
-  flower.style.left=Math.random()*100+"%";
-  flower.style.top=Math.random()*100+"%";
-  flower.style.fontSize=(28+Math.random()*35)+"px";
-  flower.style.animationDuration=(3+Math.random()*4)+"s";
-  flower.style.animationDelay=Math.random()*3+"s";
-  bg.appendChild(flower);
+const bg =
+    document.getElementById("sunflower-bg");
+
+for(let i=0;i<28;i++){
+
+    const flower =
+        document.createElement("div");
+
+    flower.className="flower";
+
+    flower.innerHTML="🌻";
+
+    flower.style.left =
+        Math.random()*100+"%";
+
+    flower.style.top =
+        Math.random()*100+"%";
+
+    flower.style.fontSize =
+        (28+Math.random()*38)+"px";
+
+    flower.style.animationDuration =
+        (3+Math.random()*4)+"s";
+
+    flower.style.animationDelay =
+        Math.random()*3+"s";
+
+    bg.appendChild(flower);
 }
 
-/* FALLING SUNFLOWERS */
-for(let i=0;i<14;i++){
-  const flower=document.createElement("div");
-  flower.className="falling";
-  flower.innerHTML="🌻";
-  flower.style.left=Math.random()*100+"%";
-  flower.style.fontSize=(20+Math.random()*25)+"px";
-  flower.style.animationDuration=(7+Math.random()*8)+"s";
-  flower.style.animationDelay=Math.random()*8+"s";
-  bg.appendChild(flower);
-}
 
-/* FLOATING HEARTS */
+/* =========================
+   FALLING SUNFLOWERS
+========================= */
+
 for(let i=0;i<15;i++){
-  const heart=document.createElement("div");
-  heart.className="heart";
-  heart.innerHTML=["🤍","💛","💗","❤️"][Math.floor(Math.random()*4)];
-  heart.style.left=Math.random()*100+"%";
-  heart.style.fontSize=(18+Math.random()*20)+"px";
-  heart.style.animationDelay=Math.random()*7+"s";
-  document.body.appendChild(heart);
+
+    const flower =
+        document.createElement("div");
+
+    flower.className="falling";
+
+    flower.innerHTML="🌻";
+
+    flower.style.left =
+        Math.random()*100+"%";
+
+    flower.style.fontSize =
+        (20+Math.random()*25)+"px";
+
+    flower.style.animationDuration =
+        (7+Math.random()*8)+"s";
+
+    flower.style.animationDelay =
+        Math.random()*8+"s";
+
+    bg.appendChild(flower);
 }
 
-/* PAGE NAVIGATION */
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+for(let i=0;i<15;i++){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+    const hearts=[
+        "🤍",
+        "💛",
+        "💗",
+        "❤️"
+    ];
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random()*hearts.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random()*100+"%";
+
+    heart.style.fontSize =
+        (18+Math.random()*20)+"px";
+
+    heart.style.animationDelay =
+        Math.random()*7+"s";
+
+    document.body.appendChild(heart);
+}
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
 function showPage(id){
-  document.querySelectorAll(".page").forEach(page=>{
-    page.classList.remove("active");
-  });
 
-  const page=document.getElementById(id);
+    document
+        .querySelectorAll(".page")
+        .forEach(page=>{
+            page.classList.remove("active");
+        });
 
-  if(page){
-    page.classList.add("active");
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
-  }
+    const page =
+        document.getElementById(id);
+
+    if(page){
+
+        page.classList.add("active");
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+    }
 }
 
-/* CAKE */
+
+/* =========================
+   CAKE
+========================= */
+
 let cakeState=0;
 
 function cakeClick(){
 
-  const candles=document.getElementById("candles");
-  const hint=document.getElementById("cakeHint");
+    const candles =
+        document.getElementById("candles");
 
-  if(cakeState===0){
+    const hint =
+        document.getElementById("cakeHint");
 
-    candles.classList.add("lit");
 
-    hint.innerHTML="Make your wishhh 🥹✨";
+    if(cakeState===0){
 
-    cakeState=1;
+        candles.classList.add("lit");
 
-  }else{
+        hint.innerHTML =
+            "Make your wishhh 🥹✨";
 
-    candles.classList.remove("lit");
-    candles.classList.add("blown");
+        cakeState=1;
 
-    hint.innerHTML="Wish made! 🤍🌻";
+    }
 
-    cakeState=2;
+    else{
 
-    setTimeout(()=>{
-      showPage("firstMeet");
-    },1800);
-  }
+        candles.classList.remove("lit");
+
+        candles.classList.add("blown");
+
+        hint.innerHTML =
+            "Wish made! 🤍🌻";
+
+        cakeState=2;
+
+
+        setTimeout(()=>{
+
+            showPage("firstMeet");
+
+        },1800);
+
+    }
 }
 
-/* ENVELOPE */
+
+/* =========================
+   OPEN LETTER
+========================= */
+
 function openLetter(){
 
-  const envelope=document.getElementById("envelope");
+    const envelope =
+        document.getElementById("envelope");
 
-  if(!envelope.classList.contains("open")){
-    envelope.classList.add("open");
-  }
+    if(
+        !envelope.classList.contains("open")
+    ){
+
+        envelope.classList.add("open");
+
+    }
 }
 
 </script>
