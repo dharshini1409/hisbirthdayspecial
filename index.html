@@ -5,10 +5,93 @@
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            body{
+  margin:0;
+  height:100vh;
+  overflow:hidden;
+  font-family: 'Trebuchet MS', sans-serif;
+
+  background: linear-gradient(180deg,#fff8d8,#ffe98a,#ffd54f);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#4b2e00;
+}
+
+/* Floating hearts */
+body::before{
+  content:"💛 🌻 🤍 💛 🌻 🤍 💛";
+  position:absolute;
+  top:-20px;
+  left:0;
+  width:100%;
+  font-size:25px;
+  animation:float 12s linear infinite;
+  opacity:.6;
+}
+
+/* Background sunflowers */
+body::after{
+  content:"🌻";
+  position:absolute;
+  inset:0;
+  font-size:70px;
+  opacity:.12;
+  display:flex;
+  flex-wrap:wrap;
+  align-content:space-evenly;
+  justify-content:space-evenly;
+}
+
+@keyframes float{
+  from{transform:translateY(-20px);}
+  to{transform:translateY(120vh);}
+}
+
+.container{
+  background:rgba(255,255,255,.45);
+  backdrop-filter: blur(12px);
+  padding:45px;
+  border-radius:35px;
+  box-shadow:0 15px 40px rgba(255,179,0,.35);
+  z-index:2;
+}
+
+.small{
+  letter-spacing:4px;
+  color:#8a5a00;
+  font-size:13px;
+  text-transform:uppercase;
+}
+
+h1{
+  font-size:68px;
+  margin:15px 0;
+}
+
+p{
+  font-size:20px;
+  color:#6b4b00;
+  line-height:1.6;
+}
+
+button{
+  margin-top:30px;
+  padding:15px 35px;
+  border:none;
+  border-radius:50px;
+  background:#ffca28;
+  color:#4b2e00;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 0 25px rgba(255,193,7,.5);
+}
+
+button:hover{
+  transform:scale(1.08);
+}
 
         body {
             height: 100vh;
@@ -120,10 +203,85 @@
 
     <script>
 
-        function startWebsite() {
-            alert("Okay... let's begin ❤️");
-        }
+        function startWebsite(){
 
+document.body.innerHTML=`
+
+<div style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(#fff7d1,#ffe082,#ffd54f);
+font-family:Trebuchet MS;
+text-align:center;
+color:#5d3b00;
+">
+
+<h1 style="font-size:60px;">🌻 Happiest Birthday 🌻</h1>
+
+<h2 style="font-size:40px;">MY SUNFLOWER 💛</h2>
+
+<p style="font-size:22px;">
+Before you continue...
+<br>
+Make a wish.
+</p>
+
+<div id="cake" style="font-size:120px;cursor:pointer;">
+🎂
+</div>
+
+<p id="text">
+Tap the cake to light the candles ✨
+</p>
+
+</div>
+`;
+
+let lit=false;
+
+document.getElementById("cake").onclick=function(){
+
+if(!lit){
+this.innerHTML="🕯️🎂🕯️";
+document.getElementById("text").innerHTML="Now close your eyes... make a wish 💛";
+lit=true;
+}else{
+
+this.innerHTML="🎂";
+
+document.getElementById("text").innerHTML="Wish made. Happy Birthday ❤️🎉";
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+heart.innerHTML=Math.random()>0.5?"💛":"🌻";
+
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top="-20px";
+heart.style.fontSize=20+Math.random()*30+"px";
+heart.style.transition="5s linear";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.style.top="100vh";
+},50);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+}
+
+}
+
+}
+
+}
     </script>
 
 </body>
